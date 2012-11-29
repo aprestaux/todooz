@@ -30,6 +30,7 @@ public class TagCloud {
     }
     
     public void top(int size) {
+    	shuffle();
     	if (size > 0) {
     		if (tags.size() >= size) {
     			tags = tags.subList(0, size);

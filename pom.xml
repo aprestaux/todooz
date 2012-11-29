@@ -14,10 +14,9 @@
 	<dependency>
 	  <groupId>junit</groupId>
 	  <artifactId>junit</artifactId>
-	  <version>3.8.1</version>
+	  <version>4.8.2</version>
 	  <scope>test</scope>
 	</dependency>
-	<!-- provided by the container -->
 	<dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>servlet-api</artifactId>
@@ -34,6 +33,30 @@
 	   <groupId>net.bull.javamelody</groupId>
 	   <artifactId>javamelody-core</artifactId>
 	   <version>1.41.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.1.2</version>
+	    <scope>compile</scope>
+	</dependency>
+	<dependency>
+	   <groupId>taglibs</groupId>
+	   <artifactId>standard</artifactId>
+	   <version>1.1.2</version>
+	   <scope>compile</scope>
+	</dependency>
+	<dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.6</version>
+	    <scope>compile</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.derby</groupId>
+	  <artifactId>derby</artifactId>
+	  <version>10.8.1.2</version>
+	  <scope>compile</scope>
 	</dependency>
   </dependencies>
   <build>

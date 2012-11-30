@@ -22,8 +22,8 @@ public class DummyData {
 
 	    task.setDate(new Date());
 	    task.setTitle("Ma tache");
-	    task.setText("C'est ma tache a moi");
-	    task.setTags("kikou, hehe");
+	    task.setText("Description de la tache");
+	    task.setTags("tag1, tag2");
 
 	    return task;
 	  }

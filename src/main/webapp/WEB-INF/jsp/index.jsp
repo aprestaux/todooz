@@ -6,14 +6,14 @@
 <head>
     <title>Todooz</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <widget:header />
     <div class="row">
         <div class="span9">
-            <legend>All tasks</legend>
+            <legend>${main_title}</legend>
             
             <c:forEach var="task" items="${tasks}">
 	            <widget:task task="${task}" />
@@ -31,20 +31,11 @@
 
             <div>
                 <legend>Tags</legend>
-                <a href="/tag/java" style="font-size:14px">java</a>
-                <a href="/tag/java" style="font-size:20px">java</a>
-                <a href="/tag/java" style="font-size:16px">java</a>
-                <a href="/tag/java" style="font-size:12px">java</a>
-                <a href="/tag/java" style="font-size:10px">java</a>
-                <a href="/tag/java" style="font-size:22px">java</a>
-                <a href="/tag/java" style="font-size:12px">java</a>
-                <a href="/tag/java" style="font-size:14px">java</a>
-                <a href="/tag/java" style="font-size:18px">java</a>
-                <a href="/tag/java" style="font-size:24px">java</a>
-                <a href="/tag/java" style="font-size:12px">java</a>
-                <a href="/tag/java" style="font-size:10px">java</a>
-                <a href="/tag/java" style="font-size:14px">java</a>
+				<c:forEach var="tag" items="${cloud.tags}">
+					<a href="/tag/${tag}" style="font-size:<%= (int) (Math.random() * 25) %>px">${tag}</a>
+				</c:forEach>
             </div>
+            
         </div>
     </div>
 </div>

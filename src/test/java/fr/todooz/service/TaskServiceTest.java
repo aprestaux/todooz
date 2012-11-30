@@ -77,6 +77,15 @@ public class TaskServiceTest {
 		Assert.assertEquals(2, taskService.findByQuery("java").size());
 		Assert.assertEquals(0, taskService.findByQuery("driven").size());
 	}
+	
+	@Test
+	public void findByTags() {
+		taskService.save(task());
+		taskService.save(task());
+
+		Assert.assertEquals(2, taskService.findByTag("java").size());
+		Assert.assertEquals(0, taskService.findByQuery("driven").size());
+	}
 
 	@Test
 	public void count() {

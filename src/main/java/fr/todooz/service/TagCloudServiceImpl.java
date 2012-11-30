@@ -4,9 +4,12 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Service;
+
 import fr.todooz.domain.Task;
 import fr.todooz.util.TagCloud;
 
+@Service
 public class TagCloudServiceImpl implements TagCloudService {
 	
 	@Inject

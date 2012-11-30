@@ -21,7 +21,7 @@
                 <form:input id="title" path="title" class="span9" />
                 <label for="date" >Date <form:errors path="date"><span style="color:red">La date n'est pas correcte</span></form:errors></label>
                 <div class="input-append">
-                    <form:input id="date" path="date" class="span9" />
+                    <form:input id="date" path="date" />
                     <span class="add-on">dd/MM/yyyy</span>
                 </div>
                 <label for="tags">Tags <form:errors path="tags" cssStyle="color: red" /></label>

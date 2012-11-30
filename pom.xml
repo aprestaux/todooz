@@ -179,6 +179,13 @@
 		<artifactId>joda-time</artifactId>
 		<version>1.5.2</version>
 	</dependency>
+	<!-- hibernate validator -->
+	<dependency>
+	   <groupId>org.hibernate</groupId>
+	   <artifactId>hibernate-validator</artifactId>
+	   <version>4.2.0.Final</version>
+	   <scope>compile</scope>
+	</dependency>
   </dependencies>
   
 </project>

@@ -8,7 +8,7 @@ import fr.todooz.domain.Task;
 
 public interface TaskService {
 
-	public void save(Task task);
+	public Long save(Task task);
 
 	public void delete(Long id);
 
@@ -21,5 +21,7 @@ public interface TaskService {
 	public List<Task> findByTag(String tag);
 	
 	public List<Task> findByDate(DateMidnight date);
+	
+	public Task findById(Long id);
 
 }

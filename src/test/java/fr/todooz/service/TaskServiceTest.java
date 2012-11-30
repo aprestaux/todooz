@@ -9,6 +9,7 @@ import junit.framework.Assert;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.joda.time.DateMidnight;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -93,6 +94,34 @@ public class TaskServiceTest {
 		taskService.save(task());
 
 		Assert.assertEquals(2, taskService.count());
+	}
+	
+	@Test
+	public void findByDate() {
+		taskService.save(task());
+		DateMidnight now = new DateMidnight();
+		DateMidnight tomorrow = now.plusDays(1);
+
+		Assert.assertEquals(1, taskService.findByDate(now).size());
+		Assert.assertEquals(0, taskService.findByDate(tomorrow).size());
+	}
+	
+	@Test
+	public void findById() {
+		Task testTask = task();
+		Long testTaskId = taskService.save(testTask);
+
+		Assert.assertEquals(testTaskId, taskService.findById(testTaskId).getId());
+	}
+	
+	@Test
+	public void udpate() {
+	    Task task = task();
+
+	    taskService.save(task);
+	    taskService.save(task);
+
+	    Assert.assertEquals(1, taskService.count());
 	}
 
 	private Task task() {
